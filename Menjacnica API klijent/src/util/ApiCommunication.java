@@ -73,4 +73,36 @@ public class ApiCommunication {
 
 	}
 
+	public static double convert(String countryFrom, String countryTo, double value) {
+		Double res;
+		String url = "http://free.currencyconverterapi.com/api/v3/convert?q=%s_%s";
+		url = String.format(url, countryFrom, countryTo);
+		
+//		System.out.println(url);
+
+		try {
+			String response = sendGet(url);
+
+			Gson gson = new GsonBuilder().create();
+			JsonObject tempJson = gson.fromJson(response, JsonObject.class);
+			JsonObject query = (JsonObject) tempJson.get("query");
+
+			int count = query.get("count").getAsInt();
+
+			if (count == 0)
+				return -1;
+
+			JsonObject results = (JsonObject) tempJson.get("results");
+			String temp = countryFrom + '_' + countryTo;
+			JsonObject result = (JsonObject) results.get(temp);
+			double val = result.get("val").getAsDouble();
+
+			return val;
+
+		} catch (IOException e) {
+			return -1;
+		}
+
+	}
+
 }

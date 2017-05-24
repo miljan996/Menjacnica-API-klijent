@@ -14,6 +14,8 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.SpinnerListModel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MenjacnicaGUI extends JFrame {
 
@@ -49,6 +51,7 @@ public class MenjacnicaGUI extends JFrame {
 		contentPane.add(getTextFieldIz());
 		contentPane.add(getTextFieldU());
 		contentPane.add(getBtnKonvertuj());
+		this.getRootPane().setDefaultButton(btnKonvertuj);
 	}
 	private JLabel getLblIzValuteZemlje() {
 		if (lblIzValuteZemlje == null) {
@@ -107,7 +110,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JTextField getTextFieldU() {
 		if (textFieldU == null) {
 			textFieldU = new JTextField();
-			textFieldU.setEnabled(false);
+			textFieldU.setEditable(false);
 			textFieldU.setBounds(215, 155, 132, 19);
 			textFieldU.setColumns(10);
 		}
@@ -116,6 +119,18 @@ public class MenjacnicaGUI extends JFrame {
 	private JButton getBtnKonvertuj() {
 		if (btnKonvertuj == null) {
 			btnKonvertuj = new JButton("Konvertuj");
+			btnKonvertuj.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					String countryFrom = (String) spinnerIz.getValue();
+					String countryTo = (String) spinnerU.getValue();
+					String amount = textFieldIz.getText();
+					
+					
+					double res = GUIController.convert(countryFrom, countryTo, amount);
+					textFieldU.setText(res + "");
+					
+				}
+			});
 			btnKonvertuj.setBounds(147, 194, 114, 25);
 		}
 		return btnKonvertuj;
