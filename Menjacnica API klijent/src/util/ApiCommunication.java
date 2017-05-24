@@ -53,8 +53,8 @@ public class ApiCommunication {
 			Gson gson = new GsonBuilder().create();
 			JsonObject tempJson = gson.fromJson(response, JsonObject.class);
 			JsonObject results = (JsonObject) tempJson.get("results");
-			Set<Entry<String, JsonElement>> set = results.entrySet();
 
+			Set<Entry<String, JsonElement>> set = results.entrySet();
 			for (Entry<String, JsonElement> pair : set) {
 				Currency tempCur = new Currency();
 				JsonObject tempVal = (JsonObject) pair.getValue();
@@ -99,6 +99,7 @@ public class ApiCommunication {
 			return val;
 
 		} catch (IOException e) {
+			e.printStackTrace();
 			return -1;
 		}
 

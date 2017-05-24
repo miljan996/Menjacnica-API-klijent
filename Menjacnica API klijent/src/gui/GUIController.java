@@ -28,9 +28,10 @@ public class GUIController {
 				try {
 					lst = ApiCommunication.getCountries();
 					logs = new LinkedList<Log>();
+					
 					menjacnicaGUI = new MenjacnicaGUI();
 					menjacnicaGUI.setVisible(true);
-
+					
 					menjacnicaGUI.addWindowListener(new WindowAdapter() {
 						@Override
 						public void windowClosing(WindowEvent e) {

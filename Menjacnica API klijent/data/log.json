@@ -1,0 +1,22 @@
+[
+  {
+    "datumVreme": "2017-05-24 18:10:16.000644",
+    "izValuta": "USD",
+    "uValuta": "RSD",
+    "kurs": 109.6523
+  },
+  {
+    "datumVreme": "2017-05-24 18:10:21.000456",
+    "izValuta": "USD",
+    "uValuta": "EUR",
+    "kurs": 0.89493467
+  }
+],
+[
+  {
+    "datumVreme": "2017-05-24 18:10:52.000903",
+    "izValuta": "JPY",
+    "uValuta": "USD",
+    "kurs": 0.00892586
+  }
+],
