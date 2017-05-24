@@ -30,7 +30,6 @@ public class MenjacnicaGUI extends JFrame {
 	private JTextField textFieldU;
 	private JButton btnKonvertuj;
 
-
 	/**
 	 * Create the frame.
 	 */
@@ -53,6 +52,7 @@ public class MenjacnicaGUI extends JFrame {
 		contentPane.add(getBtnKonvertuj());
 		this.getRootPane().setDefaultButton(btnKonvertuj);
 	}
+
 	private JLabel getLblIzValuteZemlje() {
 		if (lblIzValuteZemlje == null) {
 			lblIzValuteZemlje = new JLabel("Iz valute zemlje:");
@@ -60,6 +60,7 @@ public class MenjacnicaGUI extends JFrame {
 		}
 		return lblIzValuteZemlje;
 	}
+
 	private JLabel getLblNewLabel() {
 		if (lblNewLabel == null) {
 			lblNewLabel = new JLabel("U valutu zemlje:");
@@ -67,24 +68,27 @@ public class MenjacnicaGUI extends JFrame {
 		}
 		return lblNewLabel;
 	}
+
 	private JSpinner getSpinner_1() {
 		if (spinnerIz == null) {
-			String[] countriesStrings = GUIController.getAllCountries(); 
+			String[] countriesStrings = GUIController.getAllCountries();
 			SpinnerListModel model = new SpinnerListModel(countriesStrings);
 			spinnerIz = new JSpinner(model);
 			spinnerIz.setBounds(44, 71, 132, 20);
 		}
 		return spinnerIz;
 	}
+
 	private JSpinner getSpinner_1_1() {
 		if (spinnerU == null) {
-			String[] countriesStrings = GUIController.getAllCountries(); 
+			String[] countriesStrings = GUIController.getAllCountries();
 			SpinnerListModel model = new SpinnerListModel(countriesStrings);
 			spinnerU = new JSpinner(model);
 			spinnerU.setBounds(215, 71, 132, 20);
 		}
 		return spinnerU;
 	}
+
 	private JLabel getLblIznosIz() {
 		if (lblIznosIz == null) {
 			lblIznosIz = new JLabel("Iznos:");
@@ -92,6 +96,7 @@ public class MenjacnicaGUI extends JFrame {
 		}
 		return lblIznosIz;
 	}
+
 	private JLabel getLblIznosU() {
 		if (lblIznosU == null) {
 			lblIznosU = new JLabel("Iznos:");
@@ -99,6 +104,7 @@ public class MenjacnicaGUI extends JFrame {
 		}
 		return lblIznosU;
 	}
+
 	private JTextField getTextFieldIz() {
 		if (textFieldIz == null) {
 			textFieldIz = new JTextField();
@@ -107,6 +113,7 @@ public class MenjacnicaGUI extends JFrame {
 		}
 		return textFieldIz;
 	}
+
 	private JTextField getTextFieldU() {
 		if (textFieldU == null) {
 			textFieldU = new JTextField();
@@ -116,6 +123,7 @@ public class MenjacnicaGUI extends JFrame {
 		}
 		return textFieldU;
 	}
+
 	private JButton getBtnKonvertuj() {
 		if (btnKonvertuj == null) {
 			btnKonvertuj = new JButton("Konvertuj");
@@ -124,11 +132,10 @@ public class MenjacnicaGUI extends JFrame {
 					String countryFrom = (String) spinnerIz.getValue();
 					String countryTo = (String) spinnerU.getValue();
 					String amount = textFieldIz.getText();
-					
-					
+
 					double res = GUIController.convert(countryFrom, countryTo, amount);
 					textFieldU.setText(res + "");
-					
+
 				}
 			});
 			btnKonvertuj.setBounds(147, 194, 114, 25);

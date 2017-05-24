@@ -74,11 +74,10 @@ public class ApiCommunication {
 	}
 
 	public static double convert(String countryFrom, String countryTo, double value) {
-		Double res;
 		String url = "http://free.currencyconverterapi.com/api/v3/convert?q=%s_%s";
 		url = String.format(url, countryFrom, countryTo);
-		
-//		System.out.println(url);
+
+		// System.out.println(url);
 
 		try {
 			String response = sendGet(url);
