@@ -10,13 +10,59 @@
     "izValuta": "USD",
     "uValuta": "EUR",
     "kurs": 0.89493467
-  }
-],
-[
+  },
   {
     "datumVreme": "2017-05-24 18:10:52.000903",
     "izValuta": "JPY",
     "uValuta": "USD",
     "kurs": 0.00892586
+  },
+  {
+    "datumVreme": "2017-06-02 22:05:36.000716",
+    "izValuta": "RSD",
+    "uValuta": "EUR",
+    "kurs": 0.00819683
+  },
+  {
+    "datumVreme": "2017-06-02 22:05:47.000809",
+    "izValuta": "EUR",
+    "uValuta": "RSD",
+    "kurs": 121.9984
+  },
+  {
+    "datumVreme": "2017-06-02 22:05:52.000827",
+    "izValuta": "EUR",
+    "uValuta": "RSD",
+    "kurs": 121.9984
+  },
+  {
+    "datumVreme": "2017-06-02 22:07:45.000056",
+    "izValuta": "RUB",
+    "uValuta": "RSD",
+    "kurs": 1.9217
+  },
+  {
+    "datumVreme": "2017-06-02 22:07:54.000581",
+    "izValuta": "RSD",
+    "uValuta": "RUB",
+    "kurs": 0.519
+  },
+  {
+    "datumVreme": "2017-06-03 22:46:06.000245",
+    "izValuta": "CNY",
+    "uValuta": "USD",
+    "kurs": 0.14687739
+  },
+  {
+    "datumVreme": "2017-06-03 22:46:21.000607",
+    "izValuta": "JMD",
+    "uValuta": "RSD",
+    "kurs": 0.8436
+  },
+  {
+    "datumVreme": "2017-06-03 22:48:07.000796",
+    "izValuta": "BRL",
+    "uValuta": "JPY",
+    "kurs": 33.983
   }
-],
+]
